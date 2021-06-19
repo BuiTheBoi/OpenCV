@@ -1,0 +1,45 @@
+#######################
+# Bitwise AND
+# Bitwise OR
+# Bitwise XOR
+# Bitwise NOT
+#######################
+
+import cv2 as cv
+import numpy as np
+
+blank = np.zeros((400, 400), dtype="uint8")
+
+# NOTE: Thickness as -1 means to fill image
+rectangle = cv.rectangle(blank.copy(), (30, 30), (370, 370), 255, thickness=-1)
+circle = cv.circle(blank.copy(), (200, 200), 200, 255, -1)
+
+cv.imshow("Rectangle", rectangle)
+cv.imshow("Circle", circle)
+
+
+##########################################################################################
+
+# Bitwise AND (Intersecting regions)
+bitwise_and = cv.bitwise_and(rectangle, circle)
+cv.imshow("Bitwise AND", bitwise_and)
+
+##########################################################################################
+
+# Bitwise OR (Intersecting and non intersecting regions)
+bitwise_or = cv.bitwise_or(rectangle, circle)
+cv.imshow("Bitwise OR", bitwise_or)
+
+##########################################################################################
+
+# Bitwise XOR (NON intersecting regions)
+bitwise_xor = cv.bitwise_xor(rectangle, circle)
+cv.imshow("Bitwise XOR", bitwise_xor)
+
+##########################################################################################
+
+# Bitwise NOT (Inverts binary colors)
+bitwise_not = cv.bitwise_not(rectangle)
+cv.imshow("Rectangle NOT", bitwise_not)
+
+cv.waitKey()

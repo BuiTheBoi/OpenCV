@@ -65,7 +65,7 @@ if __name__ == "__main__":
     # Flip codes (Second parameter):
     #   0: Flip image vertically over x axis
     #   1: Flip image horizintally over y axis
-    #   -1: Combination of 0 and 1
+    #  -1: Combination of 0 and 1
 
     flip = cv.flip(img, 1)
     cv.imshow("Flip", flip)
