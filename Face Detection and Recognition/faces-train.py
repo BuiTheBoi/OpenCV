@@ -44,14 +44,14 @@ if __name__ == "__main__":
                     gray, scaleFactor=1.1, minNeighbors=4)
 
                 for (x, y, w, h) in faces_rect:  # Loop through every face within photo
-                    face_region_of_interest = gray[y: y + h, x: x + w]
+                    face_region_of_interest = gray[y:y + h, x:x + w]
                     features.append(face_region_of_interest)
                     labels.append(label)    # Index of people[]
 
     # -------------------------------------------------------------------------------------
 
     create_train()
-    print("Training successful!")
+    print("Training successful>>>>>>>>>>>>>>>>>>>>>>>>")
 
     # ----------------- Training our recognizer -----------------
 

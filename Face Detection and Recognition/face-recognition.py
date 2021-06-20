@@ -29,6 +29,8 @@ for (x, y, w, h) in faces_rect:
     face_region_of_interest = gray[y:y + h, x:x + w]
 
     label, confidence_value = face_recognizer.predict(face_region_of_interest)
+
+    # BUG WARNING: CONFIDENCE VALUE ALWAYS RETURNS 0.0 (NOT SURE WHY)
     print(f"Label = {people[label]} with a confidence of {confidence_value}")
 
     cv.putText(img, str(people[label]), (20, 20),
