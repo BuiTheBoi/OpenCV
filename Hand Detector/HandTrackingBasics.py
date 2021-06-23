@@ -31,7 +31,7 @@ while True:
 
                 if (index == 0):
                     cv.circle(img, (center_x, center_y),
-                              25, (255, 0, 255), cv.FILLED)
+                              15, (255, 0, 255), cv.FILLED)
 
             # hand_landmarks represent the red points
             # mpHands.HAND_CONNECTIONS draws the green lines
