@@ -29,7 +29,7 @@ while True:
                     landmark.x * width), int(landmark.y * height)
                 print(index, center_x, center_y)
 
-                if (index == 0):
+                if (index == 0):    # Draws large pink circle at landmark 0 (Wrist)
                     cv.circle(img, (center_x, center_y),
                               15, (255, 0, 255), cv.FILLED)
 
