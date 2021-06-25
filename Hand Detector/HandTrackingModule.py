@@ -30,7 +30,7 @@ class hand_detector():
                 if draw:
                     self.mpDraw.draw_landmarks(img, hand_landmarks,
                                                self.mpHands.HAND_CONNECTIONS)
-        return img
+        return img  # Returns image with drawing
 
     # Finds the coordinates for chosen landmark on hand
     def findPosition(self, img, handNo=0, draw=True):
